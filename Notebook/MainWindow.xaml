@@ -5,8 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notebook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1485.178" Width="3139.46">
-    <Grid Margin="10,10,2,-21"/>
+        Title="MainWindow" Height="850" Width="1000"    >
+  
+    <Grid>
+        
+        <ToolBar Name="toolBar" Height="35" VerticalAlignment="Top">          
+            <Button Name="NewFile">
+                <Image Source="iconc/New_File.png"/>
+            </Button>
+            <Separator />
+            <Button Name="SaveFile">
+                <Image Source="iconc/Save_file.png" />
+            </Button>
+            <Separator/>        
+            <Button>
+                <Image Source="iconc/Delete_file.png"/>
+            </Button>
+            <Separator/>
+            <Button x:Name="ExportDB">
+                <Image Source="iconc/ExportDataBase.png"/>
+            </Button>
+            <Separator/>
+            <Button Name="ImportDB">
+                <Image Source="iconc/ImportDataBase.png"/>
+            </Button>
+        </ToolBar>
+        
+        <Grid Margin="0,37,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="7" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TreeView Grid.Column="0" Margin="2,3,0,3" HorizontalAlignment="Left" Width="300" >
+                <TextBox>Элкмент TreeView</TextBox>
+                <TreeViewItem Header="Блок1">
+                    <TreeViewItem Header="Под Блок1"/>
+                    <TreeViewItem Header="Под Блок1" />
+                </TreeViewItem>
+                <TreeViewItem Header="Блок2">
+                    <TreeViewItem Header="Под Блок2"/>
+                    <TreeViewItem Header="Под Блок2"/>
+                </TreeViewItem>
 
+            </TreeView>
+            
+            <GridSplitter Grid.Column="1" />
 
+            <TextBox Grid.Column="2" Margin="0,3,2,3"></TextBox>
+            
+        </Grid>
+      
+    </Grid>
+   
 </Window>
