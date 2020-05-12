@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Notebook
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RegistrNewAcc.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegistrNewAcc : Page
     {
-        public MainWindow()
+        public RegistrNewAcc()
         {
             InitializeComponent();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
     }
 }
